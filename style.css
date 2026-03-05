@@ -100,8 +100,14 @@ footer {
 }
 
 /* ========================================
-   CTA Button
+   CTA Buttons
    ======================================== */
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
 
 .cta-button {
     display: inline-block;
@@ -114,13 +120,22 @@ footer {
     text-decoration: none;
     border-radius: 6px;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    margin-top: 1.5rem;
 }
 
 .cta-button:hover {
     background-color: var(--accent);
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(106, 27, 154, 0.4);
+}
+
+.cta-secondary {
+    background-color: transparent;
+    border: 2px solid var(--secondary);
+}
+
+.cta-secondary:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
 }
 
 /* ========================================
@@ -144,6 +159,26 @@ footer {
    Responsive: Hero stacks at 768px
    ======================================== */
 
+/* ========================================
+   List Styles
+   ======================================== */
+
+ul {
+    list-style-type: square;
+    padding: 0.5rem 2rem;
+    margin: 0.5rem 0;
+}
+
+li {
+    color: #E0E0E0;
+    font-size: 18px;
+    padding: 0.3rem 0;
+}
+
+li:hover {
+    color: var(--accent);
+}
+
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -157,6 +192,10 @@ footer {
         border-top: 3px solid var(--accent);
         padding-left: 0;
         padding-top: 1rem;
+    }
+
+    .cta-buttons {
+        justify-content: center;
     }
 
     .hero-github img {
