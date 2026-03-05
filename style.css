@@ -124,6 +124,23 @@ footer {
 }
 
 /* ========================================
+   Resume Link
+   ======================================== */
+
+.resume-link {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 20px 0;
+    border: 2px solid var(--accent);
+    background-color: var(--secondary);
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* ========================================
    Responsive: Hero stacks at 768px
    ======================================== */
 
