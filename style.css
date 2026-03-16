@@ -179,6 +179,37 @@ li:hover {
     color: var(--accent);
 }
 
+/* ========================================
+   Reflection Page
+   ======================================== */
+
+.reflection-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid var(--secondary);
+    border-radius: 8px;
+    background-color: #1a1a1a;
+}
+
+.reflection-content p:first-child::first-letter {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--accent);
+    float: left;
+    line-height: 0.8;
+    margin-right: 0.1em;
+}
+
+.reflection-content p:nth-child(even) {
+    text-indent: 2em;
+}
+
+.reflection-content p {
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+}
+
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
