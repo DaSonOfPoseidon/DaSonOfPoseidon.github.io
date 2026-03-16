@@ -36,6 +36,10 @@ a {
     font-size: 16px;
 }
 
+a:visited {
+    color: #7B1FA2;
+}
+
 header {
     background-color: var(--secondary);
 }
@@ -138,6 +142,16 @@ footer {
     border-color: var(--accent);
 }
 
+.cta-button:focus {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.cta-button:active {
+    transform: scale(0.97);
+    box-shadow: none;
+}
+
 /* ========================================
    Resume Link
    ======================================== */
@@ -182,14 +196,17 @@ li:hover {
 /* ========================================
    Reflection Page
    ======================================== */
-
+   
 .reflection-content {
     max-width: 800px;
+    width: 90%;
     margin: 2rem auto;
-    padding: 2rem;
+    padding: 2rem 2.5rem;
     border: 1px solid var(--secondary);
+    border-left: 4px solid var(--accent);
     border-radius: 8px;
     background-color: #1a1a1a;
+    box-sizing: border-box;
 }
 
 .reflection-content p:first-child::first-letter {
