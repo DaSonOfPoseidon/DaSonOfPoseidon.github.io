@@ -37,7 +37,7 @@ a {
 }
 
 a:visited {
-    color: #7B1FA2;
+    color: var(--accent);
 }
 
 header {
@@ -126,6 +126,10 @@ footer {
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
+.cta-button:visited {
+    color: #FFFFFF;
+}
+
 .cta-button:hover {
     background-color: var(--accent);
     transform: translateY(-2px);
@@ -135,6 +139,10 @@ footer {
 .cta-secondary {
     background-color: transparent;
     border: 2px solid var(--secondary);
+}
+
+.cta-secondary:visited {
+    color: #FFFFFF;
 }
 
 .cta-secondary:hover {
