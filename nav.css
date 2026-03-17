@@ -37,6 +37,10 @@ nav ul li a {
     transition: color 0.3s, border-color 0.3s;
 }
 
+nav ul li a:visited {
+    color: #FFFFFF;
+}
+
 nav ul li a:hover,
 nav ul li a:focus {
     color: var(--accent);
@@ -89,6 +93,10 @@ nav ul li:last-child a {
     text-decoration: none;
     border-bottom: none;
     transition: background-color 0.2s, color 0.2s;
+}
+
+.submenu li a:visited {
+    color: #FFFFFF;
 }
 
 .submenu li a:hover,

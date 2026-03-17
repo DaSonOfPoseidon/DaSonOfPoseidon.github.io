@@ -218,13 +218,13 @@ li:hover {
     margin-right: 0.1em;
 }
 
-.reflection-content p:nth-child(even) {
-    text-indent: 2em;
-}
-
 .reflection-content p {
     margin-bottom: 1.25rem;
     line-height: 1.8;
+}
+
+.reflection-content p:not(:first-child) {
+    text-indent: 2em;
 }
 
 @media (max-width: 768px) {
