@@ -10,9 +10,65 @@ header {
     background-color: var(--secondary);
 }
 
-.nav-logo {
-    max-height: 50px;
-    width: auto;
+/* ========================================
+   Logo Component
+   ======================================== */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-text-primary {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    color: #d4d4d4;
+}
+
+.logo-text-line2 {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+}
+
+.logo-text-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    background: linear-gradient(90deg, #a78bfa, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo-text-role {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    color: #9E9E9E;
+    letter-spacing: 0.03em;
+}
+
+.logo-dot {
+    color: #9E9E9E;
+    font-size: 0.7rem;
 }
 
 nav ul {
@@ -116,6 +172,10 @@ nav ul li:last-child a {
         align-items: center;
         gap: 0.75rem;
         padding: 1rem;
+    }
+
+    .logo-text {
+        display: none;
     }
 
     nav ul {
