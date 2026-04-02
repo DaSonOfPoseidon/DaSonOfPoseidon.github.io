@@ -49,6 +49,28 @@ footer {
     font-size: 14px;
 }
 
+.footer-contact {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #9E9E9E;
+    font-size: 14px;
+    margin: 0;
+}
+
+.contact-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
 /* ========================================
    Hero Section
    ======================================== */
