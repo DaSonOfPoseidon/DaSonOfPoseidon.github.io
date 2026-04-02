@@ -346,3 +346,91 @@ li:hover {
         max-width: 100%;
     }
 }
+
+/* ========================================
+   Print Styles (About Page)
+   ======================================== */
+
+@media print {
+    @page {
+        margin: 1in;
+    }
+
+    /* Reset page background and base font */
+    body {
+        background: white;
+        color: black;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 12pt;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Hide header, nav, profile image, work experience, resume sections */
+    header,
+    .profile-figure,
+    .resume-link,
+    section:nth-of-type(3),
+    section:nth-of-type(4) {
+        display: none !important;
+    }
+
+    /* Override all text colors to black */
+    h1, h3, p, li, ul, footer, a, figcaption, span {
+        color: black !important;
+        font-family: Georgia, 'Times New Roman', serif !important;
+    }
+
+    /* Name heading */
+    h1 {
+        font-size: 24pt;
+        margin: 0 0 0.5rem 0;
+    }
+
+    /* Section headings */
+    h3 {
+        font-size: 14pt;
+        margin: 0.75rem 0 0.25rem 0;
+    }
+
+    /* Paragraphs */
+    p {
+        font-size: 11pt;
+        line-height: 1.4;
+        margin: 0.25rem 0;
+    }
+
+    /* About intro layout — stack for print, no flex gap */
+    .about-intro {
+        display: block;
+        padding: 0;
+    }
+
+    /* Lists */
+    ul {
+        padding-left: 1.5rem;
+        margin: 0.25rem 0;
+    }
+
+    li {
+        font-size: 11pt;
+        padding: 0.1rem 0;
+    }
+
+    /* Sections */
+    section {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Footer */
+    footer {
+        margin-top: 1rem;
+        font-size: 10pt;
+    }
+
+    /* Remove link underlines and styling */
+    a {
+        text-decoration: none !important;
+    }
+}
