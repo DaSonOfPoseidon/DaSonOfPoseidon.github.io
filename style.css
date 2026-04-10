@@ -350,11 +350,13 @@ li:hover {
 
 .tl-item:nth-child(odd) .tl-content {
     grid-column: 1;
-    padding-right: 1.5rem;
+    grid-row: 1;
+    padding-right: 2.5rem;
 }
 
 .tl-item:nth-child(odd) .tl-marker {
     grid-column: 2;
+    grid-row: 1;
 }
 
 .tl-item:nth-child(even) {
@@ -363,11 +365,13 @@ li:hover {
 
 .tl-item:nth-child(even) .tl-content {
     grid-column: 3;
-    padding-left: 1.5rem;
+    grid-row: 1;
+    padding-left: 2.5rem;
 }
 
 .tl-item:nth-child(even) .tl-marker {
     grid-column: 2;
+    grid-row: 1;
 }
 
 .tl-marker {
