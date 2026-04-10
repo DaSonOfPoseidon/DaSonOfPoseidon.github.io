@@ -297,6 +297,150 @@ li:hover {
 }
 
 /* ========================================
+   Timeline (About Page)
+   ======================================== */
+
+.timeline-section {
+    padding: 1rem 5%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.timeline li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline li:hover {
+    color: inherit;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--secondary), var(--accent));
+    transform: translateX(-50%);
+}
+
+.tl-item {
+    position: relative;
+    width: 50%;
+    padding: 0.75rem 2rem;
+    box-sizing: border-box;
+}
+
+.tl-item:nth-child(odd) {
+    margin-left: 0;
+    text-align: right;
+    padding-right: 2.5rem;
+}
+
+.tl-item:nth-child(even) {
+    margin-left: 50%;
+    text-align: left;
+    padding-left: 2.5rem;
+}
+
+.tl-marker {
+    position: absolute;
+    top: 1.1rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid;
+    z-index: 1;
+}
+
+.tl-item:nth-child(odd) .tl-marker {
+    right: -8px;
+}
+
+.tl-item:nth-child(even) .tl-marker {
+    left: -8px;
+}
+
+.tl-work .tl-marker {
+    border-color: var(--secondary);
+    background-color: var(--secondary);
+}
+
+.tl-edu .tl-marker {
+    border-color: var(--accent);
+    background-color: var(--accent);
+}
+
+.tl-content {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    border: 1px solid #2a2a2a;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.tl-content:hover {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.tl-item.tl-work .tl-content {
+    border-left: 3px solid var(--secondary);
+}
+
+.tl-item.tl-edu .tl-content {
+    border-left: 3px solid var(--accent);
+}
+
+.tl-item:nth-child(odd).tl-work .tl-content {
+    border-left: 1px solid #2a2a2a;
+    border-right: 3px solid var(--secondary);
+}
+
+.tl-item:nth-child(odd).tl-edu .tl-content {
+    border-left: 1px solid #2a2a2a;
+    border-right: 3px solid var(--accent);
+}
+
+.tl-date {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #9E9E9E;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tl-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    margin: 0.25rem 0;
+}
+
+.tl-org {
+    font-size: 0.95rem;
+    color: #B0B0B0;
+    margin: 0;
+}
+
+.tl-detail {
+    font-size: 0.85rem;
+    color: #9E9E9E;
+    margin: 0.35rem 0 0;
+    font-style: italic;
+}
+
+/* ========================================
    Reflection Page
    ======================================== */
    
@@ -366,6 +510,45 @@ li:hover {
 
     .resume-video {
         max-width: 100%;
+    }
+
+    /* Timeline: compact single-column */
+    .timeline::before {
+        left: 8px;
+        transform: none;
+    }
+
+    .tl-item,
+    .tl-item:nth-child(odd),
+    .tl-item:nth-child(even) {
+        width: 100%;
+        margin-left: 0;
+        text-align: left;
+        padding: 0.5rem 0.5rem 0.5rem 2rem;
+    }
+
+    .tl-marker,
+    .tl-item:nth-child(odd) .tl-marker,
+    .tl-item:nth-child(even) .tl-marker {
+        left: 1px;
+        right: auto;
+    }
+
+    .tl-item:nth-child(odd).tl-work .tl-content,
+    .tl-item:nth-child(odd).tl-edu .tl-content {
+        border-right: 1px solid #2a2a2a;
+    }
+
+    .tl-item.tl-work .tl-content {
+        border-left: 3px solid var(--secondary);
+    }
+
+    .tl-item.tl-edu .tl-content {
+        border-left: 3px solid var(--accent);
+    }
+
+    .tl-content {
+        padding: 0.75rem 1rem;
     }
 }
 
@@ -466,13 +649,50 @@ li:hover {
         padding: 0;
     }
 
-    /* Hide header, nav, profile image, work experience, resume sections */
+    /* Hide header, nav, profile image, resume section */
     header,
     .profile-figure,
     .resume-link,
-    section:nth-of-type(3),
-    section:nth-of-type(4) {
+    section:nth-of-type(3) {
         display: none !important;
+    }
+
+    /* Strip timeline visual chrome for print */
+    .timeline::before,
+    .tl-marker {
+        display: none;
+    }
+
+    .tl-item,
+    .tl-item:nth-child(odd),
+    .tl-item:nth-child(even) {
+        width: 100%;
+        margin-left: 0;
+        text-align: left;
+        padding: 0.25rem 0;
+    }
+
+    .tl-content {
+        background: none;
+        border: none !important;
+        padding: 0;
+    }
+
+    .tl-date, .tl-title, .tl-org, .tl-detail {
+        color: black !important;
+        font-family: Georgia, 'Times New Roman', serif !important;
+    }
+
+    .tl-title {
+        font-size: 12pt;
+    }
+
+    .tl-date {
+        font-size: 10pt;
+    }
+
+    .tl-org, .tl-detail {
+        font-size: 11pt;
     }
 
     /* Override all text colors to black */
