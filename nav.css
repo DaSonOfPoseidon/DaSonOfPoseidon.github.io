@@ -163,6 +163,17 @@ nav ul li:last-child a {
 }
 
 /* ========================================
+   Hamburger Icon (hidden on desktop)
+   ======================================== */
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* ========================================
    Mobile
    ======================================== */
 
@@ -178,9 +189,15 @@ nav ul li:last-child a {
         display: none;
     }
 
+    .hamburger {
+        display: block;
+    }
+
     nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.75rem;
+        display: none;
+    }
+
+    .submenu {
+        display: none;
     }
 }
