@@ -219,8 +219,6 @@ nav ul li:last-child a {
     }
 
     .nav-toggle:checked ~ nav .submenu {
-        display: block;
-        position: static;
-        box-shadow: none;
+        display: none;
     }
 }
