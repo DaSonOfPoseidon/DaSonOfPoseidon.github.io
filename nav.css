@@ -116,6 +116,10 @@ nav ul li:last-child a {
     position: relative;
 }
 
+.dropdown > a::after {
+    content: " \25BE";
+}
+
 .submenu {
     display: none;
     position: absolute;
@@ -208,6 +212,10 @@ nav ul li:last-child a {
 
     .submenu {
         display: none;
+    }
+
+    .dropdown > a::after {
+        content: none;
     }
 
     .nav-toggle:checked ~ nav ul {
