@@ -173,6 +173,15 @@ nav ul li:last-child a {
     cursor: pointer;
 }
 
+/* Visually-hidden checkbox that drives the mobile menu via :checked. Kept focusable for keyboard users. */
+.nav-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 1px;
+    height: 1px;
+}
+
 /* ========================================
    Mobile
    ======================================== */
@@ -199,5 +208,19 @@ nav ul li:last-child a {
 
     .submenu {
         display: none;
+    }
+
+    .nav-toggle:checked ~ nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .nav-toggle:checked ~ nav .submenu {
+        display: block;
+        position: static;
+        box-shadow: none;
     }
 }
