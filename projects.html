@@ -2,7 +2,7 @@
   Name: Jackson Keithley
   Date: 4/20/2026
   Course: ISLT 4355
-  Description: Projects page showcasing CalendarBuddy, JobScraper, ActionJacksonInstalls, and BrowseShield.
+  Description: Projects page showcasing CalendarBuddy, ActionJacksonInstalls, and BrowseShield.
 -->
 
 <!DOCTYPE html>
@@ -59,7 +59,6 @@
                     <a href="projects.html">Projects</a>
                     <ul class="submenu">
                         <li><a href="projects.html#calendarbuddy">CalendarBuddy</a></li>
-                        <li><a href="projects.html#jobscraper">JobScraper</a></li>
                         <li><a href="projects.html#actionjacksoninstalls">ActionJacksonInstalls</a></li>
                         <li><a href="projects.html#browseshield">BrowseShield</a></li>
                     </ul>
@@ -76,11 +75,22 @@
         <section class="project-grid">
 
             <article id="calendarbuddy" class="project-card">
-                <figure class="project-figure">
-                    <img src="images/CalendarBuddy_dashboard_pic.png"
-                         alt="CalendarBuddy admin dashboard showing job counts and status metrics"
-                         class="project-img">
-                    <figcaption>CalendarBuddy admin dashboard at Socket Fiber</figcaption>
+                <figure class="project-figure project-figure-gallery">
+                    <div class="project-gallery">
+                        <img src="images/CalendarBuddy_scraper.png"
+                             alt="Scraper module: configuration form with concurrent worker pool and a live scrape log"
+                             class="project-gallery-img">
+                        <img src="images/CalendarBuddy_spreader.png"
+                             alt="Spreader module: VRPTW solver with drag-and-drop job reassignment between companies"
+                             class="project-gallery-img">
+                        <img src="images/CalendarBuddy_assigner.png"
+                             alt="Assigner module: per-company job lists with a geocoded map view"
+                             class="project-gallery-img">
+                        <img src="images/CalendarBuddy_calendar.png"
+                             alt="CalendarBuddy web UI: weekly calendar with per-day job counts and stats"
+                             class="project-gallery-img">
+                    </div>
+                    <figcaption>The four modules of CalendarBuddy: Scraper, Spreader, Assigner, and web UI</figcaption>
                 </figure>
                 <div class="project-body">
                     <h3 class="project-title">CalendarBuddy</h3>
@@ -98,30 +108,17 @@
                 </div>
             </article>
 
-            <article id="jobscraper" class="project-card">
-                <figure class="project-figure">
-                    <img src="images/JobScraper_pic.png"
-                         alt="JobScraper screenshot (placeholder)"
-                         class="project-img">
-                    <figcaption>JobScraper</figcaption>
-                </figure>
-                <div class="project-body">
-                    <h3 class="project-title">JobScraper</h3>
-                    <p class="project-tagline">Automated job-listing scraper.</p>
-                    <p class="project-description">A standalone scraping project for aggregating and filtering job postings across multiple sources. More details coming soon &mdash; I&rsquo;ll expand this section with the full write-up once I&rsquo;ve got time to document it properly.</p>
-                    <ul class="project-tech">
-                        <li>Python</li>
-                        <li>Web Scraping</li>
-                    </ul>
-                </div>
-            </article>
-
             <article id="actionjacksoninstalls" class="project-card">
-                <figure class="project-figure">
-                    <img src="images/ActionJacksonInstalls_about_pic.png"
-                         alt="Screenshot of the ActionJacksonInstalls.com About page"
-                         class="project-img">
-                    <figcaption>ActionJacksonInstalls.com &mdash; About page</figcaption>
+                <figure class="project-figure project-figure-gallery">
+                    <div class="project-gallery">
+                        <img src="images/ActionJacksonInstalls_home.png"
+                             alt="ActionJacksonInstalls.com home page with headline &lsquo;Upgrade Your Home Network&rsquo; and call-to-action buttons"
+                             class="project-gallery-img">
+                        <img src="images/ActionJacksonInstalls_quote.png"
+                             alt="ActionJacksonInstalls.com Get Started page showing the custom quote form with Contact Information and Property Details fields"
+                             class="project-gallery-img">
+                    </div>
+                    <figcaption>ActionJacksonInstalls.com &mdash; home page and custom-quote form</figcaption>
                 </figure>
                 <div class="project-body">
                     <h3 class="project-title">ActionJacksonInstalls.com</h3>
@@ -138,11 +135,16 @@
             </article>
 
             <article id="browseshield" class="project-card">
-                <figure class="project-figure">
-                    <img src="images/BrowseShield_ext_pic.png"
-                         alt="Screenshot of the BrowseShield browser extension popup"
-                         class="project-img">
-                    <figcaption>BrowseShield browser extension</figcaption>
+                <figure class="project-figure project-figure-gallery">
+                    <div class="project-gallery">
+                        <img src="images/BrowseShield_ext.png"
+                             alt="BrowseShield browser extension popup showing an 80% safety confidence score and heuristic findings for github.com"
+                             class="project-gallery-img">
+                        <img src="images/BrowseShield_portal.png"
+                             alt="BrowseShield web portal dashboard displaying the user&rsquo;s 89.43% average safety score and recent scan results"
+                             class="project-gallery-img">
+                    </div>
+                    <figcaption>BrowseShield &mdash; browser extension popup and user dashboard</figcaption>
                 </figure>
                 <div class="project-body">
                     <h3 class="project-title">BrowseShield</h3>
