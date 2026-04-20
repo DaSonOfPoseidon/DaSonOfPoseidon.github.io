@@ -703,6 +703,12 @@ li:hover {
     order: 2;
 }
 
+/* Move the accent bar to match the image side on flipped cards */
+.project-card:nth-child(even) {
+    border-left: none;
+    border-right: 4px solid var(--accent);
+}
+
 .project-figure {
     margin: 0;
     text-align: center;
@@ -794,6 +800,12 @@ li:hover {
     /* Reset the desktop alternating-order rule when stacked */
     .project-card:nth-child(even) .project-figure {
         order: 0;
+    }
+
+    /* Keep the accent bar on the left for all stacked cards */
+    .project-card:nth-child(even) {
+        border-left: 4px solid var(--accent);
+        border-right: none;
     }
 
     /* Font + size adjustments required by the assignment */
