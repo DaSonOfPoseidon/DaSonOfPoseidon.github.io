@@ -1,0 +1,179 @@
+<!--
+  Name: Jackson Keithley
+  Date: 4/20/2026
+  Course: ISLT 4355
+  Description: Projects page showcasing CalendarBuddy, JobScraper, ActionJacksonInstalls, and BrowseShield.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Jackson Keithley</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="shortcut icon" type="image/x-icon" href="webcontent/favicon.ico">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo-container" aria-label="Home">
+            <svg class="logo-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                    <linearGradient id="hex-fill" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#18181b"/>
+                        <stop offset="100%" stop-color="#3f3f46"/>
+                    </linearGradient>
+                    <linearGradient id="hex-stroke" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#a78bfa"/>
+                        <stop offset="100%" stop-color="#8b5cf6"/>
+                    </linearGradient>
+                </defs>
+                <polygon points="32,2 58,17 58,47 32,62 6,47 6,17"
+                         fill="url(#hex-fill)" stroke="url(#hex-stroke)" stroke-width="3"/>
+                <!-- Polyline constructed with assistance from AI -->
+                <polyline points="19,20.5 49.3,32 19,43.5"
+                          fill="none" stroke="#166534" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <polygon points="34,12 24,32 30,32 22,52 40,28 33,28 38,12"
+                         fill="#fbbf24" stroke="none"/>
+            </svg>
+            <div class="logo-text">
+                <span class="logo-text-primary">JACKSON KEITHLEY</span>
+                <span class="logo-text-line2">
+                    <span class="logo-text-subtitle">ACTION JACKSON</span>
+                    <span class="logo-dot">&middot;</span>
+                    <span class="logo-text-role">Software Engineer</span>
+                </span>
+            </div>
+        </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        <label for="nav-toggle" class="hamburger" aria-hidden="true">&#9776;</label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+                <li class="dropdown">
+                    <a href="projects.html">Projects</a>
+                    <ul class="submenu">
+                        <li><a href="projects.html#calendarbuddy">CalendarBuddy</a></li>
+                        <li><a href="projects.html#jobscraper">JobScraper</a></li>
+                        <li><a href="projects.html#actionjacksoninstalls">ActionJacksonInstalls</a></li>
+                        <li><a href="projects.html#browseshield">BrowseShield</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Projects</h1>
+        <p class="projects-intro">A selection of work I'm proud of &mdash; from production automation to capstone team projects. Use the Projects dropdown in the nav to jump to any section.</p>
+
+        <section class="project-grid">
+
+            <article id="calendarbuddy" class="project-card">
+                <figure class="project-figure">
+                    <img src="images/CalendarBuddy_dashboard_pic.png"
+                         alt="CalendarBuddy admin dashboard showing job counts and status metrics"
+                         class="project-img">
+                    <figcaption>CalendarBuddy admin dashboard at Socket Fiber</figcaption>
+                </figure>
+                <div class="project-body">
+                    <h3 class="project-title">CalendarBuddy</h3>
+                    <p class="project-tagline">Python automation platform that saves my team ~80 hours a week of manual data collection at Socket Fiber.</p>
+                    <p class="project-description">Four core parts: a FastAPI + Redis + Celery + PostgreSQL web interface, plus three async Playwright modules imported into the same Docker environment &mdash; the <strong>Scraper</strong> (pulls installation jobs with a 16-job concurrent worker pool), the <strong>Spreader</strong> (a VRPTW solver that builds optimized technician routes from imported configuration), and the <strong>Assigner</strong> (routes returned jobs to the correct technician and contracting company). My team uses it multiple times a day, and it has almost completely automated my job. Taught me everything I know about CI/CD, deployment best practices, automated linting, and why everything ends up as a web app.</p>
+                    <ul class="project-tech">
+                        <li>Python</li>
+                        <li>FastAPI</li>
+                        <li>Celery</li>
+                        <li>Redis</li>
+                        <li>PostgreSQL</li>
+                        <li>Playwright</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article id="jobscraper" class="project-card">
+                <figure class="project-figure">
+                    <img src="images/JobScraper_pic.png"
+                         alt="JobScraper screenshot (placeholder)"
+                         class="project-img">
+                    <figcaption>JobScraper</figcaption>
+                </figure>
+                <div class="project-body">
+                    <h3 class="project-title">JobScraper</h3>
+                    <p class="project-tagline">Automated job-listing scraper.</p>
+                    <p class="project-description">A standalone scraping project for aggregating and filtering job postings across multiple sources. More details coming soon &mdash; I&rsquo;ll expand this section with the full write-up once I&rsquo;ve got time to document it properly.</p>
+                    <ul class="project-tech">
+                        <li>Python</li>
+                        <li>Web Scraping</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article id="actionjacksoninstalls" class="project-card">
+                <figure class="project-figure">
+                    <img src="images/ActionJacksonInstalls_about_pic.png"
+                         alt="Screenshot of the ActionJacksonInstalls.com About page"
+                         class="project-img">
+                    <figcaption>ActionJacksonInstalls.com &mdash; About page</figcaption>
+                </figure>
+                <div class="project-body">
+                    <h3 class="project-title">ActionJacksonInstalls.com</h3>
+                    <p class="project-tagline">An EJS-based small-business site and an experiment in AI-driven development.</p>
+                    <p class="project-description">Built mostly by AI agents while I acted as Software Architect. ChatGPT produced the PRD and MVP; Claude Code CLI wrote the codebase; Codex ran an automated security and bug scan on every commit. A commit webhook forces the linter, type check, and Claude&rsquo;s built-in security review to run before any commit can land. Biggest takeaway: AI coding agents are much further from &ldquo;replacing&rdquo; software engineers than the hype suggests &mdash; common failure modes included bland UIs, messy codebases, fabricated documentation, tests that didn&rsquo;t actually test anything, and broken authentication.</p>
+                    <ul class="project-tech">
+                        <li>EJS</li>
+                        <li>MongoDB</li>
+                        <li>S3</li>
+                        <li>AI-Assisted Dev</li>
+                        <li>CI/CD</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article id="browseshield" class="project-card">
+                <figure class="project-figure">
+                    <img src="images/BrowseShield_ext_pic.png"
+                         alt="Screenshot of the BrowseShield browser extension popup"
+                         class="project-img">
+                    <figcaption>BrowseShield browser extension</figcaption>
+                </figure>
+                <div class="project-body">
+                    <h3 class="project-title">BrowseShield</h3>
+                    <p class="project-tagline">Mizzou IT Capstone &mdash; a browser extension that rates unsafe emails, websites, downloads, and links in real time.</p>
+                    <p class="project-description">Team capstone for my 4-person group, <strong>MAD J</strong>. A web-based browser extension plus a companion portal that uses custom heuristics and machine learning to score safety as you browse. Users can review their historical safety ratings, check existing passwords against known breaches, and generate secure replacements; parental controls are a stretch goal. My first real team software project &mdash; it made me significantly more disciplined about commit messages, branching, and pull-request etiquette &mdash; and my first browser extension.</p>
+                    <ul class="project-tech">
+                        <li>Browser Extension</li>
+                        <li>Python</li>
+                        <li>Machine Learning</li>
+                        <li>Team Project</li>
+                    </ul>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <p>
+                <img src="images/phone-icon.png" alt="Phone icon" class="contact-icon">
+                (573) 555-1234
+            </p>
+            <p>
+                <img src="images/email-icon.png" alt="Email icon" class="contact-icon">
+                jkeithley@example.com
+            </p>
+        </div>
+        <p>Jackson Keithley, 4/20/2026</p>
+    </footer>
+
+</body>
+
+</html>
