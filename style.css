@@ -193,13 +193,28 @@ footer {
     display: inline-block;
     padding: 12px 24px;
     margin: 20px 0;
-    border: 2px solid var(--accent);
     background-color: var(--secondary);
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-decoration: none;
     border-radius: 6px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.resume-link:visited {
+    color: #FFFFFF;
+}
+
+.resume-link:hover {
+    background-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(106, 27, 154, 0.4);
+}
+
+.resume-link:focus {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
 }
 
 /* ========================================
@@ -211,6 +226,14 @@ footer {
     gap: 2rem;
     align-items: flex-start;
     padding: 1rem 5%;
+}
+
+.about-left {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .profile-figure {
@@ -952,11 +975,10 @@ li:hover {
         padding: 0;
     }
 
-    /* Hide header, nav, profile image, resume section */
+    /* Hide header, nav, profile image, resume button */
     header,
     .profile-figure,
-    .resume-link,
-    section:nth-of-type(3) {
+    .resume-link {
         display: none !important;
     }
 
